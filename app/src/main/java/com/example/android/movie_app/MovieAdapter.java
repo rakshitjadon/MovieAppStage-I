@@ -26,14 +26,13 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull final ViewGroup parent) {
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.movie_item, parent, false);
+        final Movie movie = getItem(position);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.movie_item, parent, false);
         }
-        final Movie thisMovie = getItem(position);
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.movie_item);
-        Picasso.with(getContext()).load(thisMovie.getPosterPath()).into(imageView);
-
-        return listItemView;
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.movie_item);
+        Picasso.with(getContext()).load(movie.getPosterPath()).into(imageView);
+        return convertView;
     }
 }
+

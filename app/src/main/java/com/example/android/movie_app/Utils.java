@@ -1,7 +1,5 @@
 package com.example.android.movie_app;
 
-import android.net.Uri;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
