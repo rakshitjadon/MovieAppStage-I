@@ -8,7 +8,7 @@ import android.net.Uri;
 
 public class Movie {
     private static final String LOG_TAG = Movie.class.getName();
-    private static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p";
+    private static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500";
 
     private String title;
     private String movieId;
